@@ -20,23 +20,3 @@ jobs:
               run: npm install
 
 
-# unusedexports:
-#   name: Find unused exports
-#   runs-on: ubuntu-latest
-#   needs: install
-#   steps:
-#       - name: Checkout
-#         uses: actions/checkout@v3
-
-#       - name: Restore node_modules
-#         uses: actions/checkout@v2
-#         with:
-#           path: node_modules
-#           key: ${{runner.os }}-${{hashFiles('**/package-lock.json')}}
-
-#       - name: Run ts-prune
-#         run: npm ts-prune --error
-
-
-
-
