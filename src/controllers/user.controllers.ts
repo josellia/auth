@@ -8,7 +8,7 @@ export const allUsers: RequestHandler =  (req, res) => {
     } catch (error) { console.error(error) }
 }
 
-export const getUserByEmail = async (email:string) => await UserModel.findOne({ email });
+export const getUserByEmail =  (email:string) =>  UserModel.findOne({ email });
 
 export const getUserBySessionToken = async (sessionToken: string) => await UserModel.findOne({
     'authentication.sessionToken': sessionToken
